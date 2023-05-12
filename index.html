@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color Chain: Palette Harmony</title>
+    <style>
+        /* center align the div containers */
+        .top-padding {
+            padding-top: 15%;
+        }
+
+        /* center align the div containers */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32vh;
+        }
+
+        /* style the div containers */
+        .box {
+            width: 280px;
+            height: 300px;
+            background-color: #ffffff;
+            margin: -30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* style the 2 different circle sizes */
+        .circle {
+            width: 290px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #e8e8e8;
+            opacity: 0.75;
+        }
+
+        .circle2 {
+            width: 290px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #e8e8e8;
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+<div class="top-padding">
+    <div class="container">
+        <div class="box"><label for="color-picker1"></label><input type="color" id="color-picker1">
+            <div class="circle" id="circle1"></div>
+        </div>
+        <div class="box"><label for="color-picker2"></label><input type="color" id="color-picker2">
+            <div class="circle" id="circle2"></div>
+        </div>
+        <div class="box"><label for="color-picker3"></label><input type="color" id="color-picker3">
+            <div class="circle" id="circle3"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box"><label for="color-picker4"></label><input type="color" id="color-picker4">
+            <div class="circle2" id="circle4"></div>
+        </div>
+        <div class="box"><label for="color-picker5"></label><input type="color" id="color-picker5">
+            <div class="circle2" id="circle5"></div>
+        </div>
+    </div>
+</div>
+    <script>
+        // get the color picker elements
+        const colorPicker1 = document.querySelector('#color-picker1');
+        const colorPicker2 = document.querySelector('#color-picker2');
+        const colorPicker3 = document.querySelector('#color-picker3');
+        const colorPicker4 = document.querySelector('#color-picker4');
+        const colorPicker5 = document.querySelector('#color-picker5');
+
+        // get the circle elements
+        const circle1 = document.querySelector('#circle1');
+        const circle2 = document.querySelector('#circle2');
+        const circle3 = document.querySelector('#circle3');
+        const circle4 = document.querySelector('#circle4');
+        const circle5 = document.querySelector('#circle5');
+
+        // listen for changes to the color picker values
+
+        colorPicker1.addEventListener('change', event => {
+            // get the selected color
+            const color = event.target.value;
+            // set the background color of circle 1 to the selected color
+            circle1.style.backgroundColor = color;
+        });
+
+        colorPicker2.addEventListener('change', event => {
+            // get the selected color
+            const color = event.target.value;
+            // set the background color of circle 2 to the selected color
+            circle2.style.backgroundColor = color;
+        });
+
+        colorPicker3.addEventListener('change', event => {
+            // get the selected color
+            const color = event.target.value;
+            // set the background color of circle 3 to the selected color
+            circle3.style.backgroundColor = color;
+        });
+
+        colorPicker4.addEventListener('change', event => {
+            // get the selected color
+            const color = event.target.value;
+            // set the background color of circle 4 to the selected color
+            circle4.style.backgroundColor = color;
+        });
+
+        colorPicker5.addEventListener('change', event => {
+            // get the selected color
+            const color = event.target.value;
+            // set the background color of circle 5 to the selected color
+            circle5.style.backgroundColor = color;
+        });
+    </script>
+
+</body>
+
+</html>
